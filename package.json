@@ -3,7 +3,7 @@
     "start": "nodemon index.js"
   },
   "dependencies": {
-    "bcrypt": "latest",
+    "bcryptjs": "latest",
     "body-parser": "^1.20.2",
     "bson": "^5.1.0",
     "cors": "^2.8.5",
