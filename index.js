@@ -116,7 +116,7 @@ const db = mongoose.connection;
   db.once('open', () =>{
     resetLockedAccounts();
   })
- // setInterval(resetLockedAccounts, 60000); // 60000 milliseconds = 1 min
+  setInterval(resetLockedAccounts, 60000); // 60000 milliseconds = 1 min
 
 
 app.listen(process.env.PORT || 4000, () => {
