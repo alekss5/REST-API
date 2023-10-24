@@ -1,8 +1,9 @@
 # Use an official Node.js runtime as a parent image
 FROM node:14
 
+RUN mkdir -p /src/app
 # Set the working directory in the container
-WORKDIR /app
+WORKDIR /src/app
 
 # Copy the package.json and package-lock.json files into the container
 COPY package*.json ./
@@ -14,7 +15,7 @@ RUN npm install
 COPY . .
 
 # Expose the port your Express API will run on
-EXPOSE 3000
+EXPOSE 4000
 
 # Define the command to run your application
 CMD ["node", "index.js"]
